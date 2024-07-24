@@ -38,8 +38,8 @@ jobs:
           cmake --build build --config Release
       - name: rename DLL
         run: |
-          mv build/Release/portaudio_*.dll libportaudio${{ matrix.platform-suffix }}${{ matrix.asio }}.dll
-          mv build/Release/portaudio_*.lib libportaudio${{ matrix.platform-suffix }}${{ matrix.asio }}.lib
+          mv build/Release/portaudio*.dll libportaudio${{ matrix.platform-suffix }}${{ matrix.asio }}.dll
+          mv build/Release/portaudio*.lib libportaudio${{ matrix.platform-suffix }}${{ matrix.asio }}.lib
       - name: show some information about DLL
         run: |
           ldd libportaudio${{ matrix.platform-suffix }}${{ matrix.asio }}.dll

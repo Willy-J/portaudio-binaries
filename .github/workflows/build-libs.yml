@@ -1,11 +1,6 @@
 name: Build PortAudio lib
-on:
-  push:
-    branches-ignore:
-      - master
-permissions:
-  # This is needed for pushing a new commit to the repo:
-  contents: write
+on: 
+  workflow_dispatch
 jobs:
 
   windows:
